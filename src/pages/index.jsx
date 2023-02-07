@@ -58,24 +58,28 @@ const IndexPage = () => {
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
             // href="#about"
+            href="/"
           >
             <span className="text-green-300">01.</span> About
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
             // href="#experience"
+            href="/"
           >
             <span className="text-green-300">02.</span> Experience
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
             // href="#work"
+            href="/"
           >
             <span className="text-green-300">03.</span> Work
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
             // href="#contact"
+            href="/"
           >
             <span className="text-green-300">04.</span> Contact
           </a>
@@ -239,7 +243,7 @@ const IndexPage = () => {
               designing exceptional digital experiences. Currently, I am focused
               on creating accessible and human-centered products at
               <span className="text-green-300 hover:underline">
-                CipherSavvy
+                &nbsp; CipherSavvy
               </span>
               . My expertise lies in using various programming languages and
               development frameworks to build high-quality software systems. I
@@ -377,7 +381,7 @@ const IndexPage = () => {
               <div className="md:w-[70%] w-full">
                 <div id="cipherSavvy">
                   <h1 className="text-white text-xl font-sans font-bold">
-                    FrontEnd Web Developer
+                    FrontEnd Web Developer&nbsp;
                     <span className="text-green-300">CipherSavvy</span>
                   </h1>
                   <p className="font-mono text-slate-400">Aug 2022 - Present</p>
@@ -403,7 +407,7 @@ const IndexPage = () => {
 
                 <div id="iconTechnologies" className="hidden">
                   <h1 className="text-white text-xl font-sans font-bold">
-                    Head of Operations
+                    Head of Operations&nbsp;
                     <span className="text-green-300">IconTechnologies</span>
                   </h1>
                   <p className="font-mono text-slate-400">
@@ -446,7 +450,7 @@ const IndexPage = () => {
 
                 <div id="iParagons" className="hidden">
                   <h1 className="text-white text-xl font-sans font-bold">
-                    Android Developer(Intern)
+                    Android Developer(Intern)&nbsp;
                     <span className="text-green-300">iParagons</span>
                   </h1>
                   <p className="font-mono text-slate-400">
@@ -482,7 +486,7 @@ const IndexPage = () => {
                 </div>
                 <div id="service" className="hidden">
                   <h1 className="text-white text-xl font-sans font-bold">
-                    IT Technical Support (Intern)
+                    IT Technical Support (Intern)&nbsp;
                     <span className="text-green-300">
                       Servis Industries limited
                     </span>
