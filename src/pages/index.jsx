@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 
 import "../styles/global.css";
 import ProfilePicture from "../images/profilePicture.jpg";
@@ -6,42 +7,54 @@ import ProjectPicture from "../images/plural-clone.webp";
 import CV from "../assets/CV.pdf";
 
 const IndexPage = () => {
+  const [cipherSavvy, setCipherSavvy] = useState(true);
+  const [iconTechnologies, setIconTechnologies] = useState(false);
+  const [iparagons, setIparagons] = useState(false);
+  const [service, setService] = useState(false);
+  const [mobileMenu, setMobileMenu] = useState(false);
+
   const mobileMenuButton = () => {
-    console.log("Mobile Menu");
+    // setMobileMenu(true);
+    setMobileMenu(!mobileMenu);
   };
   const mobileList = () => {
     console.log("Mobile List");
   };
+  const tabDisplay = (value) => {
+    console.log(value);
+    switch (value) {
+      case "cipherSavvy":
+        setCipherSavvy(true);
+        setIconTechnologies(false);
+        setIparagons(false);
+        setService(false);
+        break;
 
-  // const tabDisplay = (tab) => {
-  //   const cipherSavvy = document.getElementById("cipherSavvy");
-  //   const iconTech = document.getElementById("iconTechnologies");
-  //   const iParagons = document.getElementById("iParagons");
-  //   const service = document.getElementById("service");
-  //   console.log(tab.value);
-
-  //   if (tab.value === "tab1") {
-  //     cipherSavvy.style.display = "block";
-  //     iconTech.style.display = "none";
-  //     iParagons.style.display = "none";
-  //     service.style.display = "none";
-  //   } else if (tab.value === "tab2") {
-  //     iconTech.style.display = "block";
-  //     cipherSavvy.style.display = "none";
-  //     iParagons.style.display = "none";
-  //     service.style.display = "none";
-  //   } else if (tab.value === "tab3") {
-  //     cipherSavvy.style.display = "none";
-  //     iconTech.style.display = "none";
-  //     iParagons.style.display = "block";
-  //     service.style.display = "none";
-  //   } else if (tab.value === "tab4") {
-  //     cipherSavvy.style.display = "none";
-  //     iconTech.style.display = "none";
-  //     iParagons.style.display = "none";
-  //     service.style.display = "block";
-  //   }
-  // };
+      case "iconTechnologies":
+        setCipherSavvy(false);
+        setIconTechnologies(true);
+        setIparagons(false);
+        setService(false);
+        break;
+      case "iParagons":
+        setCipherSavvy(false);
+        setIconTechnologies(false);
+        setIparagons(true);
+        setService(false);
+        break;
+      case "service":
+        setCipherSavvy(false);
+        setIconTechnologies(false);
+        setIparagons(false);
+        setService(true);
+        break;
+      default:
+        setCipherSavvy(false);
+        setIconTechnologies(true);
+        setIparagons(false);
+        setService(false);
+    }
+  };
 
   return (
     <div className="bg-slate-900 w-full ">
@@ -49,7 +62,7 @@ const IndexPage = () => {
         <a href="/">
           <span className="text-green-300 font-sans font-black tracking-wide border-x-greentint">
             <span className="text-white">muhammad</span>-
-            <span className="text-slate-400">umar</span>-{" "}
+            <span className="text-slate-400">umar</span>-
             <span className="text-slate-500">dev</span>
           </span>
         </a>
@@ -57,29 +70,29 @@ const IndexPage = () => {
         <div className="lg:flex lg:flex-row hidden">
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
-            // href="#about"
-            href="/"
+            href="#about"
+            // href="/"
           >
             <span className="text-green-300">01.</span> About
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
             // href="#experience"
-            href="/"
+            href="#experience"
+            // href="/"
           >
             <span className="text-green-300">02.</span> Experience
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
-            // href="#work"
-            href="/"
+            href="#work"
           >
             <span className="text-green-300">03.</span> Work
           </a>
           <a
             className="p-3 font-mono text-sm text-slate-300 hover:text-green-300"
-            // href="#contact"
-            href="/"
+            href="#contact"
+            // href="/"
           >
             <span className="text-green-300">04.</span> Contact
           </a>
@@ -87,31 +100,36 @@ const IndexPage = () => {
           <a
             className="p-3 ml-3 font-mono text-sm justify-center items-center text-green-300 rounded-lg border-2 border-green hover:bg-darkslate"
             href={CV}
-            target="_new"
+            target="_blank"
+            rel="noreferrer"
           >
             Resume
           </a>
         </div>
 
-        <button onClick={mobileMenuButton} className="lg:hidden flex z-50">
+        <button onClick={mobileMenuButton} className={`lg:hidden flex z-50`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
             className="w-10 h-10 text-green-300"
           >
             <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
             />
           </svg>
         </button>
       </nav>
       {/* <!-- Mobile Nav bar --> */}
-      <nav className="mobile-menu lg:hidden bg-slate-900 w-[75vw] h-[100vh] z-20 top-0 bottom-0 right-0 p-10 fixed items-center justify-center hidden">
+      <nav
+        className={`lg:hidden bg-slate-900 w-[75vw] h-[100vh] z-20 mt-[65px] sticky top-0 right-0 bottom-0 p-10  items-center justify-center ${
+          mobileMenu ? "flex" : "hidden"
+        }`}
+      >
         <div className="flex flex-col text-center p-10 w-full h-[100vh] justify-center">
           <a
             className="p-3 font-mono text-base text-slate-300 hover:text-green-300 text-center"
@@ -160,6 +178,8 @@ const IndexPage = () => {
           <a
             href={CV}
             className="p-3 font-mono text-base text-slate-300 hover:text-green-300 text-center"
+            target="_blank"
+            rel="noreferrer"
           >
             <button className="px-3 mt-4 font-mono text-base text-green-300 rounded-lg border-2 border-green hover:bg-darkslate text-center">
               Resume
@@ -183,9 +203,9 @@ const IndexPage = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="feather feather-github text-slate-300 w-6 hover:text-green-300 hover:-translate-y-2 delay-100"
               >
                 <title>GitHub</title>
@@ -204,9 +224,9 @@ const IndexPage = () => {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="feather feather-linkedin text-slate-300 w-6 hover:text-green-300 hover:-translate-y-2 delay-100"
               >
                 <title>LinkedIn</title>
@@ -241,9 +261,9 @@ const IndexPage = () => {
             <p className="text-lg font-semibold text-slate-300 font-sans max-w-[540px]">
               As a software engineer, I specialize in building and sometimes
               designing exceptional digital experiences. Currently, I am focused
-              on creating accessible and human-centered products at
+              on creating accessible and human-centered products at&nbsp;
               <span className="text-green-300 hover:underline">
-                &nbsp; CipherSavvy
+                CipherSavvy
               </span>
               . My expertise lies in using various programming languages and
               development frameworks to build high-quality software systems. I
@@ -350,36 +370,55 @@ const IndexPage = () => {
               <div className="md:w-[25%] md:flex-col md:overflow-x-hidden w-full flex flex-row overflow-x-scroll">
                 <button
                   value="cipherSavvy"
-                  // onclick={tabDisplay("cipherSavvy")}
-                  className="tab1 w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-slate-300 text-left border-indigo-500 hover:border-[#64ffda] hover:text-green-300 hover:bg-darkslate active:text-green-300 active:border-[#64ffda]"
+                  onClick={() => tabDisplay("cipherSavvy")}
+                  className={`w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-left  hover:border-green-100 hover:text-green-100 hover:bg-slate-800 ${
+                    cipherSavvy
+                      ? " text-green-300 border-[#64ffda]"
+                      : "text-slate-300 border-indigo-500"
+                  } `}
                 >
-                  CipherSavvy
+                  Cipher Savvy
                 </button>
                 <button
                   value="iconTechnologies"
-                  // onclick={tabDisplay("iconTechnologies")}
-                  className="tab2 w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-slate-300 text-left border-indigo-500 hover:border-[#64ffda] hover:text-green-300 hover:bg-darkslate active:text-green-300 active:border-[#64ffda]"
+                  onClick={() => tabDisplay("iconTechnologies")}
+                  className={`w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-left  hover:border-green-100 hover:text-green-100 hover:bg-slate-800 ${
+                    iconTechnologies
+                      ? " text-green-300 border-[#64ffda]"
+                      : "text-slate-300 border-indigo-500"
+                  } `}
                 >
                   IconTechnologies
                 </button>
                 <button
                   value="iParagons"
-                  // onclick={tabDisplay("iParagons")}
-                  className="tab3 w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-slate-300 text-left border-indigo-500 hover:border-[#64ffda] hover:text-green-300 hover:bg-darkslate active:text-green-300 active:border-[#64ffda]"
+                  onClick={() => tabDisplay("iParagons")}
+                  className={`w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-left  hover:border-green-100 hover:text-green-100 hover:bg-slate-800 ${
+                    iparagons
+                      ? " text-green-300 border-[#64ffda]"
+                      : "text-slate-300 border-indigo-500"
+                  } `}
                 >
                   iParagons
                 </button>
                 <button
                   value="service"
-                  // onclick={tabDisplay("service")}
-                  className="tab4 w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-slate-300 text-left border-indigo-500 hover:border-[#64ffda] hover:text-green-300 hover:bg-darkslate active:text-green-300 active:border-[#64ffda]"
+                  onClick={() => tabDisplay("service")}
+                  className={`w-[150px] h-12 px-6 md:border-l-2 md:border-b-0 border-b-2 font-sans text-base text-left  hover:border-green-100 hover:text-green-100 hover:bg-slate-800 ${
+                    service
+                      ? " text-green-300 border-[#64ffda]"
+                      : "text-slate-300 border-indigo-500"
+                  } `}
                 >
                   Service
                 </button>
               </div>
               <div className="py-6"></div>
               <div className="md:w-[70%] w-full">
-                <div id="cipherSavvy">
+                <div
+                  id="cipherSavvy"
+                  className={`${cipherSavvy ? "block" : "hidden"}`}
+                >
                   <h1 className="text-white text-xl font-sans font-bold">
                     FrontEnd Web Developer&nbsp;
                     <span className="text-green-300">CipherSavvy</span>
@@ -387,6 +426,13 @@ const IndexPage = () => {
                   <p className="font-mono text-slate-400">Aug 2022 - Present</p>
                   <div className="p-2"></div>
                   <div className="flex flex-col">
+                    <p className="text-slate-300 font-sans font-medium">
+                      I worked on React.js, Gatsby, Tailwind CSS, Bootstrap,
+                      JavaScript core, and HTML.
+                    </p>
+                    <p className="text-slate-300 font-sans font-medium">
+                      My responsibilities included:
+                    </p>
                     <div className="flex">
                       <span className="text-green-300">▹&nbsp;&nbsp;</span>
                       <p className="text-slate-300 font-sans">
@@ -404,8 +450,10 @@ const IndexPage = () => {
                     </div>
                   </div>
                 </div>
-
-                <div id="iconTechnologies" className="hidden">
+                <div
+                  id="iconTechnologies"
+                  className={`${iconTechnologies ? "block" : "hidden"}`}
+                >
                   <h1 className="text-white text-xl font-sans font-bold">
                     Head of Operations&nbsp;
                     <span className="text-green-300">IconTechnologies</span>
@@ -447,8 +495,10 @@ const IndexPage = () => {
                     </div>
                   </div>
                 </div>
-
-                <div id="iParagons" className="hidden">
+                <div
+                  id="iParagons"
+                  className={`${iparagons ? "block" : "hidden"}`}
+                >
                   <h1 className="text-white text-xl font-sans font-bold">
                     Android Developer(Intern)&nbsp;
                     <span className="text-green-300">iParagons</span>
@@ -484,7 +534,7 @@ const IndexPage = () => {
                     </div>
                   </div>
                 </div>
-                <div id="service" className="hidden">
+                <div id="service" className={`${service ? "block" : "hidden"}`}>
                   <h1 className="text-white text-xl font-sans font-bold">
                     IT Technical Support (Intern)&nbsp;
                     <span className="text-green-300">
@@ -564,7 +614,7 @@ const IndexPage = () => {
                 className="rounded border-2 border-green"
                 src={ProjectPicture}
                 alt=""
-                srcset=""
+                srcSet=""
               />
             </div>
           </section>
