@@ -57,7 +57,7 @@ const Project = () => {
               </p>
 
               <a
-                href="https://plural-clone.vercel.app/#"
+                href={items.link}
                 rel="noreferrer"
                 target="_blank"
                 className="text-slate-300 font-sans md: md:text-4xl bold"
@@ -68,12 +68,13 @@ const Project = () => {
             {/* <!-- Project Image --> */}
             <div className="group  md:flex w-full inline-flex justify-center md:px-6 py-2">
               <div className="w-1/2  absolute rounded bg-gradient-to-r from-[#a6f3e18c] to-[#a6f3e18c] group-hover:-hover:bg-gradient-to-r hover:from-[#ffffff00] hover:to-[#ffffff00] delay-100"></div>
-
-              <img
-                className="rounded border-2 border-green-500 ring-8 ring-offset-1 ring-offset-white md:w-[70%] w-full my-6"
-                src={items.picture}
-                alt="profile"
-              />
+              <a href={items.link} rel="noreferrer" target="_blank">
+                <img
+                  className="rounded border-2 border-green-500 ring-8 ring-offset-1 ring-offset-white md:w-[70%] w-full my-6"
+                  src={items.picture}
+                  alt="profile"
+                />
+              </a>
             </div>
             <div className="shadow-lg w-full h-px bg-slate-800 md:mt-20 mt-4" />
           </div>
