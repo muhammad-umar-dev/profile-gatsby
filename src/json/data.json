@@ -1,0 +1,49 @@
+[
+  {
+    "id": 1,
+    "company": "Cipher Savvy",
+    "jobTitle": "Frontend Developer",
+    "startDate": "Aug 2022",
+    "leavingDate": "Present",
+    "jobDetails": [
+      "I worked on React.js, Gatsby, Tailwind CSS, Bootstrap, JavaScript core, and HTML. ",
+      "My responsibilities included:"
+    ],
+    "jobDescription": [
+      "Developing the Frontend of the project using React.js.",
+      "Converting Figma/Adobe designs to code.",
+      "Creating responsive designs.",
+      "Collaborating with other team members.",
+      "Maintaining Code quality and ensuring all commits update to Github and deploy successfully on Vercel/Netlify."
+    ]
+  },
+  {
+    "id": 2,
+    "company": "Icon Technologies",
+    "jobTitle": "Head of Operations",
+    "startDate": "Aug 2022",
+    "leavingDate": "Aug 2022",
+    "jobDetails": [],
+    "jobDescription": [
+      "Handling day-to-day Operations in and outside the office.",
+      "Conducting effective Market Surveys regarding procurement.",
+      "Directly reporting to the manager.",
+      "In the last four months completed different projects worth 4 million in set timelines.",
+      "Develop new SOP’s for the production house for seamless operations.",
+      "Used my previous techs savvy expertise for generating an online presence."
+    ]
+  },
+  {
+    "id": 3,
+    "company": "iParagons",
+    "jobTitle": "Android Developer",
+    "startDate": "Oct 2019",
+    "leavingDate": "Apr 2020",
+    "jobDetails": [],
+    "jobDescription": [
+      "Participated in Design and developing and its workflow using Activities.",
+      "Worked on Designing, Bug-fixing and Maintenance of Application.",
+      "Key Resources for layouts and UI work utilizing xml, Views, Web-Views, List-View, Menu Item,Activities, fragments, Sync-Task and handler."
+    ]
+  }
+]
