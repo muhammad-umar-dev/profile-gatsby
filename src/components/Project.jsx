@@ -7,10 +7,31 @@ import Plural from "../images/plural.png";
 
 const Project = () => {
   const projectDetail = [
-    { id: 1, title: "AdoptMe", picture: AdoptmePicture },
-    { id: 2, title: "Immuna", picture: ImuunaPicture },
-    { id: 3, title: "NewsMonkey", picture: NewsMonkey },
-    { id: 4, title: "Plural", picture: Plural },
+    {
+      id: 1,
+      title: "AdoptMe",
+      picture: AdoptmePicture,
+      link: "https://adopt-m-app.netlify.app/",
+    },
+    {
+      id: 2,
+      title: "Immuna",
+      picture: ImuunaPicture,
+      link: "https://immuna.vercel.app/login",
+    },
+    {
+      id: 3,
+      title: "NewsMonkey",
+      picture: NewsMonkey,
+      link:
+        "https://vercel.com/muhammad-umar-dev/news-monkey/FcszRiKYrwbCwLXZwD6hUCbJ6hAC",
+    },
+    {
+      id: 4,
+      title: "Plural",
+      picture: Plural,
+      link: "https://plural-clone-voil3ybje-muhammad-umar-dev.vercel.app/",
+    },
   ];
   return (
     <section id="work">
