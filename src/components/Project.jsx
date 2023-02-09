@@ -1,8 +1,17 @@
 import React from "react";
 
-import ProjectPicture from "../images/plural-clone.webp";
+import AdoptmePicture from "../images/adoptme.png";
+import ImuunaPicture from "../images/immuna.png";
+import NewsMonkey from "../images/newaMonkey.png";
+import Plural from "../images/plural.png";
 
 const Project = () => {
+  const projectDetail = [
+    { id: 1, title: "AdoptMe", picture: AdoptmePicture },
+    { id: 2, title: "Immuna", picture: ImuunaPicture },
+    { id: 3, title: "NewsMonkey", picture: NewsMonkey },
+    { id: 4, title: "Plural", picture: Plural },
+  ];
   return (
     <section id="work">
       <h1 className="text-slate-300 font-sans font-semibold text-2xl inline-flex items-center">
@@ -10,33 +19,45 @@ const Project = () => {
         Some Things I’ve Built &nbsp; &nbsp;
         <hr className="lg:w-52 w-12 border-slate-700" />
       </h1>
-      <div className="p-6"></div>
+      <div className="py-6"></div>
 
-      <div className="flex float-right text-right">
-        <div>
-          <p className="text-green-300 font-mono text-base">Featured Project</p>
-          <h3 className="text-slate-300 font-sans text-2xl bold">
-            <a
-              href="https://plural-clone.vercel.app/"
-              rel="noreferrer"
-              target="_blank"
+      {projectDetail.map((items) => {
+        return (
+          <div className="md:my-16 my-8" key={items.id}>
+            <div
+              className={`flex flex-col w-full  ${
+                items.id % 2 === 0
+                  ? "float-right text-right items-end"
+                  : "float-left text-left items-start"
+              }`}
             >
-              Plural Landing Page
-            </a>
-          </h3>
-          <div className="project-description"></div>
-        </div>
-      </div>
-      {/* <!-- Project Image --> */}
-      <div>
-        <div className="absolute rounded bg-gradient-to-r from-[#64ffdb8c] to-[#64ffdb8c] hover:bg-gradient-to-r hover:from-[#ffffff00] hover:to-[#ffffff00]"></div>
-        <img
-          className="rounded border-2 border-green"
-          src={ProjectPicture}
-          alt=""
-          srcSet=""
-        />
-      </div>
+              <p className="text-green-300 font-mono text-base">
+                Featured Project
+              </p>
+
+              <a
+                href="https://plural-clone.vercel.app/#"
+                rel="noreferrer"
+                target="_blank"
+                className="text-slate-300 font-sans md: md:text-4xl bold"
+              >
+                {items.title}
+              </a>
+            </div>
+            {/* <!-- Project Image --> */}
+            <div className="group  md:flex w-full inline-flex justify-center md:px-6 py-2">
+              <div className="w-1/2  absolute rounded bg-gradient-to-r from-[#a6f3e18c] to-[#a6f3e18c] group-hover:-hover:bg-gradient-to-r hover:from-[#ffffff00] hover:to-[#ffffff00] delay-100"></div>
+
+              <img
+                className="rounded border-2 border-green-500 ring-8 ring-offset-1 ring-offset-white md:w-[70%] w-full my-6"
+                src={items.picture}
+                alt="profile"
+              />
+            </div>
+            <div className="shadow-lg w-full h-px bg-slate-800 md:mt-20 mt-4" />
+          </div>
+        );
+      })}
     </section>
   );
 };
