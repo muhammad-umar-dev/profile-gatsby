@@ -16,11 +16,11 @@ const Introduction = () => {
         I build things for the web.
       </h1>
       <div className="p-6"></div>
-      <p className="text-lg font-semibold text-slate-300 font-sans max-w-[540px]">
+      <p className="text-lg md:font-semibold font-normal text-slate-300 font-sans max-w-[540px]">
         As a software engineer, I specialize in building and sometimes designing
         exceptional digital experiences. Currently, I am focused on creating
         accessible and human-centered products at&nbsp;
-        <span className="text-green-300 hover:underline">CipherSavvy</span>. My
+        <span className="text-green-300 hover:underline">Cipher Savvy</span>. My
         expertise lies in using various programming languages and development
         frameworks to build high-quality software systems. I am committed to
         staying up-to-date with the latest developments in the software

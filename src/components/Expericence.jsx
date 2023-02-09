@@ -10,7 +10,7 @@ const Expericence = () => {
   };
 
   return (
-    <section id="experience" className="md:px-0 px-[10%]">
+    <section id="experience" className="md:px-0 px-[1%]">
       <h1 className="text-slate-300 font-sans font-semibold text-2xl inline-flex items-center">
         <span className="text-green-300 font-mono font-light">02. &nbsp; </span>
         Where I've Worked &nbsp; &nbsp;

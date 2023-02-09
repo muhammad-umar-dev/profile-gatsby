@@ -13,7 +13,7 @@ import RightSide from "../components/RightSide";
 
 const IndexPage = () => {
   return (
-    <div className="bg-slate-900 w-full ">
+    <div className="bg-slate-900 w-full  ">
       <Nav />
 
       <div className="main flex justify-between w-full">
