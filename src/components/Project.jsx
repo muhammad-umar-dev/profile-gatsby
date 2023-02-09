@@ -70,7 +70,12 @@ const Project = () => {
               <div className="w-1/2  absolute rounded bg-gradient-to-r from-[#a6f3e18c] to-[#a6f3e18c] group-hover:-hover:bg-gradient-to-r hover:from-[#ffffff00] hover:to-[#ffffff00] delay-100"></div>
               <a href={items.link} rel="noreferrer" target="_blank">
                 <img
-                  className="rounded border-2 border-green-500 ring-8 ring-offset-1 ring-offset-white md:w-[70%] w-full my-6"
+                  className={`rounded border-2 border-green-500 ring-8 ring-offset-1 ring-offset-white md:w-[70%] w-full my-6
+                  ${
+                    items.id % 2 === 0
+                      ? "float-left text-left items-start"
+                      : "float-right text-right items-end"
+                  }`}
                   src={items.picture}
                   alt="profile"
                 />
