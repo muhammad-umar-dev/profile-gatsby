@@ -12,21 +12,14 @@ const Introduction = () => {
         Muhammad Umar.
       </h1>
       <div className="p-2"></div>
-      <h1 className="text-slate-300 md:text-7xl text-4xl font-sans font-bold">
+      <h1 className="text-gray-300 md:text-7xl text-4xl font-sans font-bold">
         I build things for the web.
       </h1>
       <div className="p-6"></div>
-      <p className="text-lg md:font-semibold font-normal text-slate-300 font-sans max-w-[540px]">
-        As a software engineer, I specialize in building and sometimes designing
-        exceptional digital experiences. Currently, I am focused on creating
-        accessible and human-centered products at&nbsp;
-        <span className="text-green-300 hover:underline">Cipher Savvy</span>. My
-        expertise lies in using various programming languages and development
-        frameworks to build high-quality software systems. I am committed to
-        staying up-to-date with the latest developments in the software
-        engineering field and constantly improving my skills. I enjoy working on
-        challenging projects that allow me to use my problem-solving skills to
-        create innovative solutions.
+      <p className="text-lg md:font-semibold font-normal text-gray-300 font-sans max-w-[80%]">
+        As a frontend developer, I specialize in the design and functionality of
+        the client side of websites. I am passionate about creating beautiful
+        and intuitive interfaces that deliver a seamless user experience.
       </p>
     </section>
   );

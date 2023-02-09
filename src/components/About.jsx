@@ -30,8 +30,8 @@ const About = () => {
             responsible for creating and maintaining websites. This involves
             working with clients to understand their needs and developing a plan
             to meet those needs, using programming languages such as HTML, CSS,
-            JavaScript, ReactJS and NodeJS to create the website's, and testing
-            the website to ensure it is functioning properly.
+            JavaScript, and ReactJS to create the website's, and testing the
+            website to ensure it is functioning properly.
           </p>
           <div className="p-6"></div>
 
