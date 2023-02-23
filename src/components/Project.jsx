@@ -34,13 +34,12 @@ const Project = () => {
     },
   ];
   return (
-    <section id="work">
+    <section id="work" className="py-8 w-full pt-28">
       <h1 className="text-slate-300 font-sans font-semibold text-2xl inline-flex items-center">
         <span className="text-green-300 font-mono font-light">03. &nbsp; </span>
         Some Things I’ve Built &nbsp; &nbsp;
         <hr className="lg:w-52 w-12 border-slate-700" />
       </h1>
-      <div className="py-6"></div>
 
       {projectDetail.map((items) => {
         return (

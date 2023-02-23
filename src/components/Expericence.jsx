@@ -10,14 +10,17 @@ const Expericence = () => {
   };
 
   return (
-    <section id="experience" className="md:px-0 px-[1%]">
+    <section
+      id="experience"
+      className="md:px-0 px-[1%] h-screen reletive pt-28"
+    >
       <h1 className="text-slate-300 font-sans font-semibold text-2xl inline-flex items-center">
         <span className="text-green-300 font-mono font-light">02. &nbsp; </span>
         Where I've Worked &nbsp; &nbsp;
         <hr className="lg:w-52 w-12 border-slate-700" />
       </h1>
-      <div className="p-6"></div>
-      <div className="flex md:flex-row flex-col">
+
+      <div className="flex md:flex-row flex-col justify-center place-items-center h-full">
         <div className="md:w-[25%] md:flex-col md:overflow-x-hidden  w-full flex flex-row overflow-x-scroll">
           {Data.map((items) => {
             return (
@@ -36,9 +39,8 @@ const Expericence = () => {
             );
           })}
         </div>
-        <div className="py-6"></div>
 
-        <div className="md:w-[70%] w-full">
+        <div className="md:w-[70%] w-full ">
           {Data.filter((items) => items.company === currentCompany).map(
             (items) => {
               return (

@@ -14,7 +14,7 @@ const About = () => {
     "PhotoShop",
   ];
   return (
-    <section id="about">
+    <section className="h-screen py-14 relative pt-28 " id="about">
       <h1 className="text-slate-300 font-sans font-semibold text-2xl inline-flex items-center">
         <span className="text-green-300 font-mono font-light">01. &nbsp; </span>
         About Me &nbsp; &nbsp;

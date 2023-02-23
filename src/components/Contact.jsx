@@ -2,8 +2,8 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section id="contact">
-      <div className="flex flex-col justify-center items-center">
+    <section id="contact" className="py-8 h-screen pt-24">
+      <div className="flex flex-col h-full justify-center items-center">
         <span className="text-green-300 font-mono font-light">
           04. What’s Next?
         </span>

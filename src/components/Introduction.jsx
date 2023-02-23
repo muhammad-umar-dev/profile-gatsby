@@ -2,8 +2,7 @@ import React from "react";
 
 const Introduction = () => {
   return (
-    <section className="">
-      <div className="p-8"></div>
+    <section className="py-8 h-screen reletive flex flex-col justify-center">
       <h5 className="text-green-300 text-2xl font-sans font-bold">
         Hi, my name is
       </h5>

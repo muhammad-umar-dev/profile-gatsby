@@ -14,8 +14,8 @@ const Nav = () => {
   };
   return (
     <>
-      <nav className="flex justify-between w-full h-24 bg-slate-900 shadow z-30 relative md:px-8 px-4 py-3 items-center">
-        <a href="/">
+      <nav className="flex justify-between  w-full h-24 bg-slate-900 shadow z-30 fixed md:px-8 px-4 py-3 items-center">
+        <a href="#">
           <span className="text-green-300 font-sans font-black tracking-wide border-x-greentint">
             <span className="text-white">muhammad</span>-
             <span className="text-slate-400">umar</span>-
